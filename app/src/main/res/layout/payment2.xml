@@ -179,7 +179,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textTwoOnOne" />
 
     <Button
-        android:id="@+id/buttonComplete"
+        android:id="@+id/completeButton"
         android:layout_width="194dp"
         android:layout_height="48dp"
         android:text="@string/complete"

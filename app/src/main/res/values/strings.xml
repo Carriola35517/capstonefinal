@@ -37,4 +37,7 @@
     <string name="mr">Mr.</string>
     <string name="mrs_ms">Mrs./Ms.</string>
     <string name="other">Other</string>
+    <string name="register">Register</string>
+    <string name="welcome">Welcome</string>
+    <string name="payment">Payment</string>
 </resources>
