@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Videos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6D4491">
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="250dp"
+        android:layout_height="170dp"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/lotuswelcome"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <EditText
+        android:id="@+id/sample1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="VIDEO 1"
+        android:textColor="#FBFAFA"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="250dp"
+        android:layout_height="170dp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="315dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/sample2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="VIDEO 2"
+        android:textColor="#FBFAFA"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
