@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:name=".MainApplication"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LotusAddictionApp"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +28,7 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/login"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,7 +39,7 @@
             android:name=".RegisterActivity"
             android:exported="true"
             android:label="@string/register"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +50,7 @@
             android:name=".WelcomeActivity"
             android:exported="true"
             android:label="@string/welcome"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,7 +61,7 @@
             android:name=".PaymentActivity"
             android:exported="true"
             android:label="@string/payment"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,7 +72,7 @@
             android:name=".Payment2Activity"
             android:exported="true"
             android:label="@string/payment"
-            android:theme="@style/Theme.LotusAddictionApp">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
