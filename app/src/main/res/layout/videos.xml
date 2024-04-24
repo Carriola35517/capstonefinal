@@ -8,7 +8,7 @@
     android:background="#6D4491">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/videoImage1"
         android:layout_width="250dp"
         android:layout_height="170dp"
         android:cropToPadding="true"
@@ -18,18 +18,18 @@
         tools:layout_editor_absoluteY="38dp" />
 
     <EditText
-        android:id="@+id/sample1"
+        android:id="@+id/sampleVideo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="VIDEO 1"
+        android:text="@string/video_1"
         android:textColor="#FBFAFA"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="232dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/videoImage2"
         android:layout_width="250dp"
         android:layout_height="170dp"
         tools:layout_editor_absoluteX="80dp"
@@ -37,12 +37,12 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/sample2"
+        android:id="@+id/sampleVideo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="VIDEO 2"
+        android:text="@string/video_2"
         android:textColor="#FBFAFA"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="516dp" />

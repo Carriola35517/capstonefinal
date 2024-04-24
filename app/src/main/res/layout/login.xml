@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Welcome"
+    android:id="@+id/Login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6D4491">
@@ -35,39 +35,38 @@
         android:layout_width="333dp"
         android:layout_height="318dp"
         android:src="@drawable/lotuswelcome"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextEmailAddress"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#FAF6F6"
         android:ems="10"
         android:hint="@string/email_address_hint"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="277dp"
         android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints=""
         android:backgroundTint="#FAF6F6"
         android:ems="10"
         android:hint="@string/editTextPassword"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="432dp"
-        tools:ignore="MissingConstraints"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

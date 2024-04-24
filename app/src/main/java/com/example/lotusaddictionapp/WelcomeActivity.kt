@@ -10,10 +10,10 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome)
 
-        val registerBtn = findViewById<Button>(R.id.registerButton)
-        registerBtn.setOnClickListener{
-            println("Register clicked in LoginActivity")
-            val intent = Intent(this, RegisterActivity::class.java)//I've never used kotlin much, but can I still just use class.java here without any problems?
+        val startBtn = findViewById<Button>(R.id.startButton)
+        startBtn.setOnClickListener{
+            println("Get Started button clicked in WelcomeActivity")
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent) //start up the registration activity
         }
     }

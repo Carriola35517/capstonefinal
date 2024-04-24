@@ -40,4 +40,13 @@
     <string name="register">Register</string>
     <string name="welcome">Welcome</string>
     <string name="payment">Payment</string>
+    <string name="welcome_to_lotus">Welcome to Lotus</string>
+    <string name="how_can_we_help">How can we help?</string>
+    <string name="get_started_welcome">Get Started</string>
+    <string name="video_1">VIDEO 1</string>
+    <string name="video_2">VIDEO 2</string>
+    <string name="videos">Videos</string>
+    <string name="plans">Plans</string>
+    <string name="calendar">Calendar</string>
+    <string name="home">Home</string>
 </resources>

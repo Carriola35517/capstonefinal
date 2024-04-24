@@ -150,11 +150,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textCVV" />
 
     <Button
-        android:id="@+id/continueButton"
+        android:id="@+id/completeButton"
         android:layout_width="201dp"
         android:layout_height="49dp"
         android:layout_marginBottom="92dp"
-        android:text="@string/continue_button"
+        android:text="@string/complete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

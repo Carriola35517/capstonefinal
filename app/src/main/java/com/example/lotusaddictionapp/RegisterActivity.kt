@@ -20,8 +20,8 @@ class RegisterActivity : AppCompatActivity() {
             Or a database honestly, whatever we are more comfortable using probably
             For now I'm just going to have it redirect to the welcome page probably
             */
-            val intent = Intent(this, WelcomeActivity::class.java)
-            startActivity(intent) //start up the welcome activity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent) //start up the home activity
         }
 
     }
