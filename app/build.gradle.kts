@@ -1,6 +1,9 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+
+    id("com.google.devtools.ksp")
+    id("androidx.room")
 }
 
 android {
@@ -9,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.lotusaddictionapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,22 +35,26 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs += "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.12"
     }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    room{
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 dependencies {
-
+/*
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -64,4 +71,41 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+ */
+    dependencies {
+        implementation(platform("androidx.compose:compose-bom:2024.04.01"))
+        implementation("androidx.activity:activity-compose:1.9.0")
+        implementation("androidx.compose.material:material-icons-extended")
+        implementation("androidx.compose.material3:material3")
+        implementation("androidx.compose.ui:ui")
+        implementation("androidx.compose.ui:ui-graphics")
+        implementation("androidx.compose.ui:ui-tooling-preview")
+        implementation("androidx.core:core-ktx:1.13.0")
+        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+        implementation("androidx.appcompat:appcompat:1.6.1")
+        implementation("com.google.android.material:material:1.11.0")
+        implementation("androidx.annotation:annotation:1.7.1")
+        implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+
+
+        debugImplementation("androidx.compose.ui:ui-test-manifest")
+        debugImplementation("androidx.compose.ui:ui-tooling")
+}
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // To use Kotlin Symbol Processing (KSP)
+    ksp("androidx.room:room-compiler:$room_version")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.6")
+    implementation("androidx.compose.material:material-icons-extended")
 }
