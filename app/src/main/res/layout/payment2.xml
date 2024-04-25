@@ -5,7 +5,7 @@
     android:id="@+id/Payment "
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D4491">
+    android:background="#72528E">
 
     <TextView
         android:id="@+id/textView4"
@@ -27,8 +27,8 @@
         android:textColor="#FBFAFA"
         android:textColorHighlight="#C85252"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="108dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="107dp" />
 
     <TextView
         android:id="@+id/textView5"

@@ -5,7 +5,7 @@
     android:id="@+id/register1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D4491">
+    android:background="#72528E">
 
     <TextView
         android:id="@+id/textGetStarted"
@@ -46,11 +46,11 @@
         android:backgroundTint="#FBFAFA"
         android:ems="10"
         android:hint="@string/middlename"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFirstName"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -88,11 +88,11 @@
         android:backgroundTint="#FBFAFA"
         android:ems="10"
         android:hint="@string/password"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress2"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress2" />
 
     <CheckBox
         android:id="@+id/checkBoxMr"

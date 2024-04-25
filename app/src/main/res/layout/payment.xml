@@ -5,7 +5,7 @@
     android:id="@+id/Payment "
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D4491">
+    android:background="#72528E">
 
     <TextView
         android:id="@+id/textView2"
