@@ -11,7 +11,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login)
 
         //REGISTER BUTTON
-        val registerBtn = findViewById<Button>(R.id.REGISTER)
+        val registerBtn = findViewById<Button>(R.id.registerButton)
         registerBtn.setOnClickListener{
             println("Register clicked in LoginActivity")
             val intent = Intent(this, RegisterActivity::class.java)//I've never used kotlin much, but can I still just use class.java here without any problems?
@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         //LOGIN BUTTON
-        val loginBtn = findViewById<Button>(R.id.Register)
+        val loginBtn = findViewById<Button>(R.id.loginButton)
         loginBtn.setOnClickListener{
             println("Login clicked in LoginActivity")
             /*
@@ -28,8 +28,8 @@ class LoginActivity : AppCompatActivity() {
             Or a database honestly, whatever we are more comfortable using probably
             For now I'm just going to have it redirect to the welcome page probably
             */
-            val intent = Intent(this, WelcomeActivity::class.java)
-            startActivity(intent) //start up the welcome activity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent) //start up the home activity
         }
     }
 

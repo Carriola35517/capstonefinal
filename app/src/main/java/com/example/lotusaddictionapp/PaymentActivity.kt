@@ -1,30 +1,26 @@
 package com.example.lotusaddictionapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class PaymentActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.payment)
 
         //CONTINUE BUTTON
-        val continueBtn = findViewById<Button>(R.id.continueButton) //not to be confused with buttonContinue from the register activity
-        continueBtn.setOnClickListener{
-            println("Continue clicked in PaymentActivity")
+        val completeBtn = findViewById<Button>(R.id.completeButton) //not to be confused with buttonContinue from the register activity
+        completeBtn.setOnClickListener{
+            println("Complete clicked in PaymentActivity")
 
-            /*
-            LOGIC STILL NEEDS TO BE HANDLED HERE
-            all of the logic to handle filling in all of the boxes and saving them
-            to a json file/database should be done here probably.
-            Could maybe be done seperately from the button, but I believe the button
-            is the best trigger for this.
-             */
+            //this is where we would put the logic for handling payment, but we arent going to do anything for that here at this time
 
-            val intent = Intent(this, Payment2Activity::class.java)
-            startActivity(intent) //start up the payment2 activity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent) //start up the home activity
         }
     }
 }
