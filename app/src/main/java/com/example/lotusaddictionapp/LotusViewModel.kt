@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.lotusaddictionapp.data.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.time.Instant
 import java.util.Date
 
@@ -17,13 +18,13 @@ class LotusViewModel : ViewModel() {
     //val allGames: LiveData<List<GameEntity>> = gameDao.getAll()
 
     // ##### USERS #####
-    fun addUser(first: String, last: String, username: String, pass: String) {
+    fun addUser(first: String, last: String, email: String, pass: String) {
         viewModelScope.launch(Dispatchers.IO) {
             userDao.insert(
                 User(
                     firstName = first,
                     lastName = last,
-                    username = username,
+                    email = email,
                     passHash = pass,
                     createdDate = Date.from(Instant.now())
                 )
@@ -31,50 +32,70 @@ class LotusViewModel : ViewModel() {
         }
     }
 
-    fun validateUser(username: String, password: String): Boolean {
-        if (username == "" || password == "") return false
-
-        var usercheckName: String? = "default"
-        var usercheckPass: String? = "default"
+    fun createDefaultUser() {
+        val defaultEmail = "default@email.com"
         viewModelScope.launch(Dispatchers.IO) {
-            val usercheck = userDao.getUserByUsername(username)
-            if (usercheck == null){
-                usercheckName="null"
-                usercheckPass="null"
+            if (userDao.getUserByEmail(defaultEmail) == null){
+                userDao.insert(
+                    User(
+                        firstName = "defaultfirst",
+                        lastName = "defaultlast",
+                        email = defaultEmail,
+                        passHash = "default",
+                        createdDate = Date.from(Instant.now())
+                    )
+                )
             }
-            else{
-                usercheckName = usercheck.username
-                usercheckPass = usercheck.passHash
-            }
-
         }
-        while(usercheckName == "default" || usercheckPass == "default" ){
+    }
+    fun getUserByEmail(email: String) : User {
+        var user: User = User("null", "null", "null", "null", Date.from(Instant.now()))
+        viewModelScope.launch(Dispatchers.IO) {
+            user = userDao.getUserByEmail(email)
         }
-        return (username == usercheckName && password == usercheckPass)
+        while(user.email == "null"){}
+        return user
     }
 
-    /*fun addUser(name: String){
-        viewModelScope.launch(Dispatchers.IO) {
-            userDao.insert(User(
-                id = 1,
-                firstName = "Bobbyyyy",
-                lastName = "Rodgers",
-                username = "brodgers",
-                passHash = "password",
-                createdDate =  Date.from(Instant.now())))
-            userDao.insert(User(
-                id = 2,
-                firstName = "Simon",
-                lastName = "Cowell",
-                username = "scow",
-                passHash = "password123",
-                createdDate =  Date.from(Instant.now())))
+    fun getUserById(id: Int) : User {
+        val user = userDao.getUserById(id)
+        if (user == null){
+            return(User("null", "null", "null", "null", Date.from(Instant.now())))
         }
-    }*/
+        else{
+            return user
+        }
+    }
 
-    fun deleteUser(id: Int) {
+
+    fun validateUser(email: String, password: String): Pair<Boolean, String> {
+        if (email == "" || password == "") return Pair(false, "")
+
+        var usercheckEmail: String? = "email-not-set"
+        var usercheckPass: String? = "pass-not-set"
+        var usercheckName: String = "name-not-set"
         viewModelScope.launch(Dispatchers.IO) {
-            userDao.delete(userDao.getUserByID(1))   // TODO implement delete
+            val usercheck = userDao.getUserByEmail(email)
+            if (usercheck == null){
+                usercheckEmail="null"
+                usercheckPass="null"
+                usercheckName="null"
+            }
+            else{
+                usercheckEmail = usercheck.email
+                usercheckPass = usercheck.passHash
+                usercheckName = usercheck.firstName.toString()
+            }
+
+        }
+        while(usercheckEmail == "email-not-set" || usercheckPass == "pass-not-set" ){
+        }
+        return (Pair<Boolean, String>(email == usercheckEmail && password == usercheckPass, usercheckName))
+    }
+
+    fun deleteUserById(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            userDao.delete(userDao.getUserById(id))   // TODO implement delete
         }
     }
 }

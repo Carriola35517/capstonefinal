@@ -19,10 +19,10 @@ interface UserDao {
     fun delete(user: User)
 
     @Query("SELECT * FROM user WHERE id = :id")
-    fun getUserByID(id: Int) : User
+    fun getUserById(id: Int) : User
 
-    @Query("SELECT * FROM user WHERE username = :username")
-    fun getUserByUsername(username: String) : User?
+    @Query("SELECT * FROM user WHERE email = :email")
+    fun getUserByEmail(email: String) : User
 
     @Query("SELECT * FROM user")
     fun getAll(): LiveData<List<User>>

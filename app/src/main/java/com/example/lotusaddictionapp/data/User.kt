@@ -10,7 +10,7 @@ import java.util.Date
 data class User(
     @ColumnInfo(name="first_name")public val firstName: String?,
     @ColumnInfo(name="last_name")public val lastName: String?,
-    @ColumnInfo(name="username")public val username: String?,
+    @ColumnInfo(name="email")public val email: String?,
     @ColumnInfo(name="password_hash")public val passHash: String?,
     @ColumnInfo(name="created_date")public val createdDate: Date,
 ){

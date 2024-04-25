@@ -64,15 +64,16 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
  */
+    androidTestImplementation(libs.androidx.espresso.core)
+    //androidTestImplementation(libs.androidx.ui.test.junit4)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.4.1")
+
     dependencies {
         implementation(platform("androidx.compose:compose-bom:2024.04.01"))
         implementation("androidx.activity:activity-compose:1.9.0")
@@ -95,16 +96,16 @@ dependencies {
         debugImplementation("androidx.compose.ui:ui-test-manifest")
         debugImplementation("androidx.compose.ui:ui-tooling")
 }
-    val room_version = "2.6.1"
+    val roomVersion = "2.6.1"
 
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
 
     // To use Kotlin Symbol Processing (KSP)
-    ksp("androidx.room:room-compiler:$room_version")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$room_version")
+    implementation("androidx.room:room-ktx:$roomVersion")
 
     implementation("androidx.compose.runtime:runtime-livedata:1.6.6")
     implementation("androidx.compose.material:material-icons-extended")
