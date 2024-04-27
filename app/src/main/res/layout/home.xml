@@ -11,12 +11,12 @@
         android:id="@+id/videoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="4dp"
         android:text="@string/videos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/plansButton"
@@ -27,73 +27,84 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoButton"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintTop_toBottomOf="@+id/textChangePlan"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/calendarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginTop="5dp"
         android:text="@string/calendar"
-        app:layout_constraintBottom_toTopOf="@+id/plansButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoButton"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/textHotD" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="316dp"
         android:layout_height="226dp"
-        app:srcCompat="@drawable/lotuswelcome"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lotuswelcome" />
 
     <TextView
         android:id="@+id/FunStuff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back!"
+        android:layout_marginTop="24dp"
+        android:text="@string/welcome_back"
         android:textColor="#F4EFEF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#E14545"
-        android:text="Logout"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="656dp" />
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textChangePlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Want to Change Your Plan?"
+        android:layout_marginTop="34dp"
+        android:text="@string/want_to_change_your_plan"
         android:textColor="#F4EFEF"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarButton" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textHotD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Highlights of the Day:"
+        android:layout_marginTop="26dp"
+        android:text="@string/highlights_of_the_day"
         android:textColor="#F4EFEF"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="443dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoButton" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:text="Helpful Videos"
         android:textColor="#F4EFEF"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="349dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FunStuff" />
 </androidx.constraintlayout.widget.ConstraintLayout>

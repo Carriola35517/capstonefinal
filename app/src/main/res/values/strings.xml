@@ -49,4 +49,12 @@
     <string name="plans">Plans</string>
     <string name="calendar">Calendar</string>
     <string name="home">Home</string>
+    <string name="highlights_of_the_day">Highlights of the Day:</string>
+    <string name="want_to_change_your_plan">Want to Change Your Plan?</string>
+    <string name="logout">Logout</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="agenda">AGENDA:</string>
+    <string name="watch_video_1">Watch Video #1</string>
+    <string name="watch_video_2">Watch Video #2</string>
+    <string name="watch">Watch</string>
 </resources>

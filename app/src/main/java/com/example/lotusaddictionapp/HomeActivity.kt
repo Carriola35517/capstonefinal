@@ -35,5 +35,16 @@ class HomeActivity : AppCompatActivity(){
             startActivity(intent) //start up the calendar activity
         }
 
+        //LOGOUT BUTTON
+        val logoutBtn = findViewById<Button>(R.id.logoutButton)
+        logoutBtn.setOnClickListener{
+            println("Logout button clicked in HomeActivity")
+
+            //implement logout logic here
+
+            val intent = Intent(this, WelcomeActivity::class.java)
+            startActivity(intent) //start up the welcome activity
+        }
+
     }
 }

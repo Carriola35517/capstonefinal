@@ -12,9 +12,9 @@ class WelcomeActivity : AppCompatActivity() {
 
         val startBtn = findViewById<Button>(R.id.startButton)
         startBtn.setOnClickListener{
-            println("Get Started button clicked in WelcomeActivity")
+            println("Started button clicked in WelcomeActivity")
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent) //start up the registration activity
+            startActivity(intent) //start up the login activity
         }
     }
 }
